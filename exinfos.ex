@@ -1,0 +1,9 @@
+[INFOS]
+gaf=0
+title=WW_Agenda
+image=description.gif
+description=description.rtf
+source=1
+typesite=0
+[OBJECT]
+WW_Agenda.WWP=4096

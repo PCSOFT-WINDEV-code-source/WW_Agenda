@@ -1,0 +1,170 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : ProcéduresServeur
+ major_version : 28
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x1cfcb0620010e7c0
+ internal_properties : CAAAAAgAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  internal_properties : CAAAAAgAAADnoDvYdb0pJXGavt46jN8B6GY1AU94HLCAXwXlpYEznOFExtc8IRaVt0XYL5ZncElBwOY1eJZw4ZYcZhfFDmmJ4VEr978pmq1wwiPd6rraKGV6vFna1Xh7v7a+I3iXgBUeWsFNmaf1oABj36QalhKlS0YNJZRyLxBnXNFfou+7asWYJI9DY+MRsnKrkL97v03otUIiW6P3Kh4MpTxqe9NTPnn+Uj3rJe8rv727zfTgSgd1HPqJeFqSTcZe
+  type_code : 31
+  p_codes : []
+  procedures :
+   -
+     name : AjoutDonnéesDeTest
+     internal_properties : CAAAAAgAAAA7Evqnj7mmGWgA8ats1q8BFB2WSt/W6l+PuePBB2+lagpnvRrdRPN0+kq+w4lkWbQbx8H3hP36B1BBpZYP3/fMAW3ZkViPqTfVRoL3Yf9OJf9EbZOt/1AR9VLsp8QU+3kXqchfbsJ38op0Q2z9DhlHIsjWqmxFVtvU4fOiS320tw==
+     procedure_id : 2088738305097142155
+     type_code : 15
+     code : |1+
+      
+      // Ajout des données de test
+      PROCEDURE AjoutDonnéesDeTest()
+      
+      HLitPremier(RendezVous)
+      // S'il n'y a pas d'enregistrement
+      Si HEnDehors(RendezVous) ALORS
+      	
+      	// RDV1
+      	RendezVous.Titre = <§@1cfcb062000fe7c00002§>
+      	RendezVous.Contenu = <§@1cfcb062000fe7c00003§>
+      	RendezVous.DateDébut..PartieHeure = "0800"
+      	RendezVous.DateDébut..PartieDate = DateDuJour()
+      	RendezVous.DateFin..PartieHeure = "1200"
+      	RendezVous.DateFin..PartieDate = DateDuJour()
+      	RendezVous.CouleurDeFond = COULEUR_TRAVAIL
+      	RendezVous.Catégorie = "Travail"
+      	RendezVous.Ressource = "Mon agenda"
+      	HAjoute(RendezVous)
+      	
+      	//RDV2
+      	RendezVous.Titre = <§@1cfcb062000fe7c00004§>
+      	RendezVous.Contenu = ""
+      	RendezVous.DateDébut..PartieHeure = "1230"
+      	RendezVous.DateDébut..PartieDate = DateDuJour()
+      	RendezVous.DateFin..PartieHeure = "1350"
+      	RendezVous.DateFin..PartieDate = DateDuJour()
+      	RendezVous.CouleurDeFond = COULEUR_PERSO
+      	RendezVous.Catégorie = "Personnel"
+      	RendezVous.Ressource = "Mon agenda"
+      	HAjoute(RendezVous)
+      	
+      	// RDV3
+      	RendezVous.titre = <§@1cfcb062000fe7c00000§>
+      	RendezVous.Contenu = <§@1cfcb062000fe7c00001§>
+      	RendezVous.DateDébut..PartieHeure = "1430"
+      	RendezVous.DateDébut..PartieDate = DateDuJour()
+      	RendezVous.DateFIN..PartieHeure = "1830"
+      	RendezVous.DateFin..PartieDate = DateDuJour()
+      	RendezVous.CouleurDeFond = COULEUR_TRAVAIL
+      	RendezVous.Catégorie = "Travail"
+      	RendezVous.Ressource = "Mon agenda"
+      	HAjoute(RendezVous)
+      	
+      	// RDV4
+      	RendezVous.Titre = <§@1cfcb062000fe7c00005§>
+      	RendezVous.Contenu = <§@1cfcb062000fe7c00006§> + RC + <§@1cfcb062000fe7c00007§>
+      	RendezVous.DateDébut..PartieHeure = "0830"
+      	RendezVous.DateDébut..PartieDate = DateDuJour()
+      	RendezVous.DateDébut..PartieDate..Jour += 1
+      	RendezVous.DateFin..PartieHeure = "1150"
+      	RendezVous.DateFin..PartieDate = DateDuJour()
+      	RendezVous.DateFin..PartieDate..Jour += 1
+      	RendezVous.CouleurDeFond = COULEUR_TRAVAIL
+      	RendezVous.Catégorie = "Travail"
+      	RendezVous.Ressource = "Mon agenda"
+      	HAjoute(RendezVous)
+      	
+      	// RDV5
+      	RendezVous.Titre = <§@1cfcb062000fe7c00008§>
+      	RendezVous.Contenu = <§@1cfcb062000fe7c00009§>
+      	RendezVous.DateDébut..PartieHeure = "1430"
+      	RendezVous.DateDébut..PartieDate = DateDuJour()
+      	RendezVous.DateDébut..PartieDate..Jour += 1
+      	RendezVous.DateFin..PartieHeure = "1630"
+      	RendezVous.DateFin..PartieDate = DateDuJour()
+      	RendezVous.DateFin..PartieDate..Jour += 1
+      	RendezVous.CouleurDeFond = COULEUR_TRAVAIL
+      	RendezVous.Catégorie = "Travail"
+      	RendezVous.Ressource = "Mon agenda"
+      	HAjoute(RendezVous)
+      	
+      	// RDV6
+      	RendezVous.Titre = <§@1cfcb062000fe7c0000a§>
+      	RendezVous.Contenu = <§@1cfcb062000fe7c0000b§>
+      	RendezVous.DateDébut..PartieHeure = "0830"
+      	RendezVous.DateDébut..PartieDate = DateDuJour()
+      	RendezVous.DateDébut..PartieDate..Jour += 2
+      	RendezVous.DateFin..PartieHeure = "1730"
+      	RendezVous.DateFin..PartieDate = DateDuJour()
+      	RendezVous.DateFin..PartieDate..Jour += 2
+      	RendezVous.CouleurDeFond = COULEUR_TRAVAIL
+      	RendezVous.Catégorie = "Travail"
+      	RendezVous.Ressource = "Mon agenda"
+      	HAjoute(RendezVous)
+      FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : COL_SansNom1
+resources :
+ string_res :
+  identifier : 0x1cfcb062000fe7c0
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+  strings :
+   -
+     text :
+      fr-FR : Réunion Chefs de secteur
+     index : 0
+   -
+     text :
+      fr-FR : Elaboration du planning trimestriel
+     index : 1
+   -
+     text :
+      fr-FR : Déplacement site Aquitaine
+     index : 2
+   -
+     text :
+      fr-FR : Audit sécurité sur le site Aquitaine
+     index : 3
+   -
+     text :
+      fr-FR : Repas
+     index : 4
+   -
+     text :
+      fr-FR : Réunion Technique
+     index : 5
+   -
+     text :
+      fr-FR : "- Analyse des coûts"
+     index : 6
+   -
+     text :
+      fr-FR : "- Plan d'action"
+     index : 7
+   -
+     text :
+      fr-FR : Compte Rendu
+     index : 8
+   -
+     text :
+      fr-FR : Ecrire le compte rendu de la réunion du matin
+     index : 9
+   -
+     text :
+      fr-FR : Formation Niveau 2 - Paris
+     index : 10
+   -
+     text :
+      fr-FR : Animation d'une formation sur Paris
+     index : 11
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
